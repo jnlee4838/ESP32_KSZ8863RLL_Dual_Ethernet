@@ -1,2 +1,55 @@
-# ESP32_KSZ8863RLL_Dual_Ethernet
-ESP32 + KSZ8863RLL 개발보드 — Wi-Fi와 듀얼 이더넷을 하나로!  ESP32-KSZ8863RLL 개발보드는 Wi-Fi 무선 네트워크와 유선 듀얼 포트 이더넷 스위치를 결합한 통합형 IoT 개발 플랫폼입니다. ESP32의 강력한 듀얼코어 MCU와 KSZ8863RLL 2포트 스위치 칩을 기반으로, 게이트웨이·브리지·스마트팩토리·로봇 네트워크 장비 개발에 이상적입니다.
+**ESP32 + KSZ8863RLL Development Board — Wi-Fi and Dual Ethernet in One!**\
+
+The ESP32-KSZ8863RLL Development Board is an integrated IoT development platform that combines Wi-Fi wireless networking with a wired dual-port Ethernet switch. Based on the powerful dual-core ESP32 MCU and the KSZ8863RLL 2-port switch chip, it is ideal for developing gateways, bridges, smart factories, and robot network equipment.
+
+**Key Features**\
+
+ESP32 Dual-Core MCU – Integrated Wi-Fi / BLE Support
+KSZ8863RLL 2-Port Ethernet Switch – Stable Wired Network Configuration
+Ethernet Daisy-Chain Configuration
+I2C / RMII Interface Integration – Fast Communication and Data Processing
+Wi-Fi ↔ Ethernet Bridge Implementation
+Maximized Convenience in Firmware Development – ​​ESP-IDF
+5 ~ 12V Power Input
+
+**Applications**\
+
+IoT Gateway / Sensor Hub
+Industrial Ethernet Bridge
+Smart Home and Smart Factory Network Equipment
+Robot Communication Module / Control Board
+Security and Monitoring Systems
+
+**Development Environment**\
+
+Fully Compatible with ESP-IDF (Official SDK)
+FreeRTOS-Based Multitasking Support
+Network Debugging with Wireshark + Serial Debug
+
+**Purchase Information**\
+
+Product Name: ESP32-KSZ8863RLL Development Board
+Composition: 1 Main Board (Pin Headers Not Soldered)
+Price: Contact Us
+Inquiry: jnlee4838@gmail.com
+
+**ESP-IDF FW Development Flow**\
+
+**A. Prerequisites**\
+
+1. ESP32-KSZ8863RLL development board
+2. Two PCs (or whatever, each with a LAN)
+3. Two Ethernet cables
+4. USB B to USB A cable
+5. VS Code (ESP-IDF)
+6. Wireshark
+
+**B. Setup for Checking Throughput**\
+
+1. First, visit [https://components.espressif.com/components/espressif/ksz8863/versions/0.2.7] and download the latest update.
+2. Using VS Code
+3. I-perf...
+4. Wireshark...
+
+2. VS CODE 사용
+
