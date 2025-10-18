@@ -1,11 +1,20 @@
 **ESP32 + KSZ8863RLL Development Board — Wi-Fi and Dual Ethernet in One!**
 
 The ESP32-KSZ8863RLL Development Board is an integrated IoT development platform that combines Wi-Fi wireless networking with a wired dual-port Ethernet switch. Based on the powerful dual-core ESP32 MCU and the KSZ8863RLL 2-port switch chip, it is ideal for developing gateways, bridges, smart factories, and robot network equipment.
-</br>
-</br>
+
+<img width="640" height="640" alt="esp32_ksz8863_0 4_01" src="https://github.com/user-attachments/assets/0426df2c-c178-4d7a-8bd4-1e46ffa9fb25" />
+<img width="640" height="640" alt="esp32_ksz8863_0 4_02" src="https://github.com/user-attachments/assets/dc54fd56-ed6d-4405-b6a9-774471bcc549" />
+<img width="640" height="640" alt="esp32_ksz8863_0 4_04" src="https://github.com/user-attachments/assets/8605681c-60f2-46ac-b1e1-d4da894c7004" />
+<img width="640" height="640" alt="esp32_ksz8863_0 4_05" src="https://github.com/user-attachments/assets/805021c4-c1b5-4027-967b-f8852b9574bd" />
+
+<img width="640" height="640" alt="esp32_ksz8863_0 4_front" src="https://github.com/user-attachments/assets/cae1f7ba-1907-478e-80b3-5450ef7b9853" />
+<img width="640" height="640" alt="esp32_ksz8863_0 4_top" src="https://github.com/user-attachments/assets/8eda5c46-7136-4f92-89fd-68b495cb4528" />
+<img width="640" height="640" alt="esp32_ksz8863_0 4_bottom" src="https://github.com/user-attachments/assets/1fb2be64-de66-4ee8-90c1-06fe1342757c" />
+
+
 **Key Features**
 
-ESP32 Dual-Core MCU – Integrated Wi-Fi / BLE Support
+ESP32 Dual-Core MCU – Integrated Wi-Fi / BLE Support!
 
 KSZ8863RLL 2-Port Ethernet Switch – Stable Wired Network Configuration
 
@@ -58,17 +67,19 @@ Inquiry: jnlee4838@gmail.com
 
 
 **A. Prerequisites**
-</br>
+
 1. ESP32-KSZ8863RLL development board
 2. Two PCs (or whatever, each with a LAN)
 3. Two Ethernet cables
 4. USB B to USB A cable
 5. VS Code (ESP-IDF)
 6. Wireshark
+<img width="640" height="640" alt="esp32_ksz8863_0 4_03" src="https://github.com/user-attachments/assets/4ce6f014-952d-4eed-b118-876fd84fcd03" />
+<img width="640" height="640" alt="esp32_ksz8863_0 4_06" src="https://github.com/user-attachments/assets/f3439580-9d4e-4851-8ad5-d53ae6272ce5" />
 
 
 **B. Setup for Checking Throughput**
-</br>
+
 1. First, visit [https://components.espressif.com/components/espressif/ksz8863/versions/0.2.7] and download the latest update.
 2. Using VS Code
 3. I-perf...
