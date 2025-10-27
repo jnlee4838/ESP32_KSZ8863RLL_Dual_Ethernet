@@ -6,13 +6,14 @@ The ESP32-KSZ8863RLL Development Board is an integrated IoT development platform
 
 ## Screenshots
 
-![App Screenshot_1](https://github.com/user-attachments/assets/cae1f7ba-1907-478e-80b3-5450ef7b9853){: width="640px" height="640px"}
+![App Screenshot_1](https://github.com/user-attachments/assets/cae1f7ba-1907-478e-80b3-5450ef7b9853)
 
-![App Screenshot_2](https://github.com/user-attachments/assets/24f86a0e-1915-4caa-bf30-c487a905d60e){: width="640px" height="640px"}
+![App Screenshot_2](https://github.com/user-attachments/assets/24f86a0e-1915-4caa-bf30-c487a905d60e)
 
-![App Screenshot_3](https://github.com/user-attachments/assets/1fb2be64-de66-4ee8-90c1-06fe1342757c){: width="640px" height="640px"}
+![App Screenshot_3](https://github.com/user-attachments/assets/1fb2be64-de66-4ee8-90c1-06fe1342757c)
 
-![App Screenshot_4](https://github.com/user-attachments/assets/7247d672-f2b0-444a-b214-c814f9b58659){: width="640px" height="640px"}
+![App Screenshot_4](https://github.com/user-attachments/assets/7247d672-f2b0-444a-b214-c814f9b58659)
+
 
 ## Features
 
