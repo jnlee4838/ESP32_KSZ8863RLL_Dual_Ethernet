@@ -8,7 +8,7 @@ The ESP32-KSZ8863RLL Development Board is an integrated IoT development platform
 
 ![App Screenshot_1](images/esp32_ksz8863_0.4_front.png)
 
-![App Screenshot_2](images/esp32_ksz8863_0.4_hw_description,png)
+![App Screenshot_2](images/esp32_ksz8863_0.4_hw_description.png)
 
 ![App Screenshot_4](images/esp32_ksz8863rll_ev_kit.png)
 
@@ -91,7 +91,7 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * Set the strap pins config as follows;
 
-![I2C Strap Pin Config](images/esp32_ksz8863rll_ev_kit_strap.jpg)
+![I2C Strap Pin Config](images/esp32_ksz8863rll_ev_kit_strap.JPG)
 
 * install VS CODE
 
