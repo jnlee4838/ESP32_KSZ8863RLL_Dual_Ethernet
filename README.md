@@ -3,8 +3,10 @@
 The ESP32-KSZ8863RLL Development Board is an integrated IoT development platform that combines Wi-Fi wireless networking with a wired dual-port Ethernet switch. Based on the powerful dual-core ESP32 MCU and the KSZ8863RLL 2-port switch chip, it is ideal for developing gateways, bridges, smart factories, and robot network equipment.
 
 <img width="640" height="640" alt="esp32_ksz8863_0 4_front" src="https://github.com/user-attachments/assets/cae1f7ba-1907-478e-80b3-5450ef7b9853" />
-<img width="640" height="640" alt="esp32_ksz8863_0 4_top" src="https://github.com/user-attachments/assets/8eda5c46-7136-4f92-89fd-68b495cb4528" />
+<img width="640" height="640" alt="esp32_ksz8863_0 4_hw_description" src="https://github.com/user-attachments/assets/24f86a0e-1915-4caa-bf30-c487a905d60e" />
 <img width="640" height="640" alt="esp32_ksz8863_0 4_bottom" src="https://github.com/user-attachments/assets/1fb2be64-de66-4ee8-90c1-06fe1342757c" />
+<img width="2597" height="2597" alt="esp32_ksz8863rll_ev_kit_02" src="https://github.com/user-attachments/assets/7247d672-f2b0-444a-b214-c814f9b58659" />
+
 
 
 **Key Features**
@@ -70,8 +72,7 @@ Inquiry: jnlee4838@gmail.com
 5. VS Code (ESP-IDF)
 6. Wireshark
 
-<img width="640" height="640" alt="esp32_ksz8863_0 4_03" src="https://github.com/user-attachments/assets/4ce6f014-952d-4eed-b118-876fd84fcd03" />
-
+<img width="257" height="350" alt="i2c_strap_pin_conf" src="https://github.com/user-attachments/assets/b89a59e5-01f1-4294-bdac-bb289d5b3ce3" />
 
 
 **B. Setup for Checking Throughput**
