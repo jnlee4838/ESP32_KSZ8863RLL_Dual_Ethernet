@@ -12,10 +12,11 @@ The ESP32-KSZ8863RLL Development Board is an integrated IoT development platform
 
 ![App Screenshot_3](https://github.com/user-attachments/assets/1fb2be64-de66-4ee8-90c1-06fe1342757c)
 
-![App Screenshot_4](https://github.com/user-attachments/assets/7247d672-f2b0-444a-b214-c814f9b58659)
+![App Screenshot_4](https://github.com/user-attachments/assets/8ab7c5d7-32cd-48b2-910b-a4821d4c754a)
 
 
 ## Features
+
 
 ### Key Features
 
@@ -67,6 +68,7 @@ The ESP32-KSZ8863RLL Development Board is an integrated IoT development platform
 * reverse porality protection & over current protection in USB power
 
 * reverse porality protection & over current protection in external power
+
 ## Buy
 
 For an inquiry, email me jnlee4838@gmail.com
@@ -82,6 +84,7 @@ For an inquiry, email me jnlee4838@gmail.com
 * Aliexpress: Not yet
 
 * Amazon: Not yet
+
 ## Preparation
 
 We are going to use ESP-IDF version 5.4.2 only in this project, you should install and set up your own IDE, toolchain, etc. and the demo environment is Windows 11 & VS Code.
@@ -99,6 +102,7 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 * go to https://github.com/espressif/vscode-esp-idf-extension?tab=readme-ov-file#how-to-use and try to follow "Hello world" project first.
 
 * everything is done !!!
+
 ## Set-up Flow
 
 ### MANUAL WAY
@@ -181,6 +185,7 @@ idf.py create-project-from-example "espressif/ksz8863=0.2.10:simple_switch"
 
 
 **or please check the video for config and build HERE**
+
 ## Console output
 
 the console should be the followings if you have the following connection diagram
@@ -353,6 +358,7 @@ it braodcasts the above ethernet frame every two seconds.
 * type "ARP" in filter.
 * you can find the "ARP" ethernet frames that they are talking each others.
 * type "eth.src == xx xx xx xx xx xx" (Port #3) and find a lot of messages...esp32_ksz8863rll_ev_kit is shooting it every two secs.
+
 ## Related
 
 Here is another project to check the Throughput of esp32_ksz8863rll_ev_kit by Iperf
