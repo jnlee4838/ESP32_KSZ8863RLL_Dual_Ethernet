@@ -1,4 +1,0 @@
-dependencies:
-  espressif/ksz8863:
-    version: ~0.2.0
-description: Managed Switch Example
