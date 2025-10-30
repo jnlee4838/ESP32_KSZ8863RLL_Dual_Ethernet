@@ -91,7 +91,7 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * Set the strap pins config as follows;
 
-![I2C Strap Pin Config](images/esp32_ksz8863rll_ev_kit_strap.JPG)
+![I2C Strap Pin Config](images/esp32_ksz8863_strap_pin_config.PNG)
 
 * install VS CODE
 
