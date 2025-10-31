@@ -73,7 +73,7 @@ For an inquiry, email me jnlee4838@gmail.com
 
 ### Korea
 
-* Smartstore: https://smartstore.naver.com/radiosystek
+* Smartstore: [**HERE**](https://smartstore.naver.com/radiosystek)
 
 ### International
 
