@@ -75,8 +75,6 @@ For an inquiry, email me jnlee4838@gmail.com
 
 * Smartstore: https://smartstore.naver.com/radiosystek
 
-* Coupang: https://shop.coupang.com/radiosystek
-
 ### International
 
 * Aliexpress: Not yet
