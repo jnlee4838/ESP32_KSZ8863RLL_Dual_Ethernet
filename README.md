@@ -110,7 +110,7 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * make sure everything is ok like the following image.
 
-![esp32 ksz8863 simple switch build](images/esp32_ksz8863_vscode_build_setup,png)
+![esp32 ksz8863 simple switch build](images/esp32_ksz8863_vscode_build_setup.png)
 
 ### Next Steps
 
@@ -128,7 +128,7 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * click #6, "SDK Configuration Editor (menuconfig)" and then it takes time and you can see new folders "build" and "managed_compoennts" in the "EXPLORER" window at left side. and also please check the "OUTPUT" window in bottom side of your VS Code that will tell whether your config is correct or not. hopefully no problems at all!
 
-![esp32 ksz8863 simple switch menuconfig entry](images/esp32_ksz8863_menuconfig_entry,png)
+![esp32 ksz8863 simple switch menuconfig entry](images/esp32_ksz8863_menuconfig_entry.png)
 
 * you could see "SDK Configutation editor" window in your VS Code.
 
@@ -136,19 +136,19 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
     * --> Type "cpu" in the top search box" and find "CPU Frequency" to "240MHz".
     
-![esp32 ksz8863 simple switch menuconfig_01](images/esp32_ksz8863_menuconfig_01,png)
+![esp32 ksz8863 simple switch menuconfig_01](images/esp32_ksz8863_menuconfig_01.png)
     
     * --> Type "flash" and find "Flash size" to "4M".
 
-![esp32 ksz8863 simple switch menuconfig_02](images/esp32_ksz8863_menuconfig_02,png)
+![esp32 ksz8863 simple switch menuconfig_02](images/esp32_ksz8863_menuconfig_02.png)
         
     * --> Click "Example Configuration" and find "Enable external RMII clock oscillator" unselect. //it doesn't affect on project conf. but btw we are not using external osciallator.
 
-![esp32 ksz8863 simple switch menuconfig_03](images/esp32_ksz8863_menuconfig_03,png)
+![esp32 ksz8863 simple switch menuconfig_03](images/esp32_ksz8863_menuconfig_03.png)
 
     * --> Type "eth" and find "Ethernet" and make sure "Support ESP32 internal EMAC controller" is checked and "RMII clock mode: Input RMII clockfrom external"`.
     
-![esp32 ksz8863 simple switch menuconfig_04](images/esp32_ksz8863_menuconfig_04,png)
+![esp32 ksz8863 simple switch menuconfig_04](images/esp32_ksz8863_menuconfig_04.png)
     
 
 * Done !!! Click "Save".
