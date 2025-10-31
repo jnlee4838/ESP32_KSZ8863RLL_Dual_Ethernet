@@ -6,12 +6,13 @@ The ESP32-KSZ8863RLL Development Board is an integrated IoT development platform
 
 ## Screenshots
 
-![App Screenshot_1](images/esp32_ksz8863_0.4_front.png)
+![esp32 ksz8863 dual Ethernet ev kit front](images/esp32_ksz8863_0.4_front.png)
 
-![App Screenshot_2](images/esp32_ksz8863_0.4_hw_description.png)
+![esp32 ksz8863 dual Ethernet ev kit hw description](images/esp32_ksz8863_0.4_hw_description.png)
 
-![App Screenshot_4](images/esp32_ksz8863rll_ev_kit.png)
+![esp32 ksz8863 dual Ethernet ev kit](images/esp32_ksz8863rll_ev_kit.png)
 
+![esp32 ksz8863 network diagram](images/esp32_ksz8863_network_diagram.png)
 
 ## Features
 
@@ -97,47 +98,23 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 ## Set-up Flow
 
-### MANUAL WAY
+* please visit [**here**](https://components.espressif.com/components/espressif/ksz8863/versions/0.2.10/readme) for more information.
 
-* visit [**here**](https://components.espressif.com/components/espressif/ksz8863/versions/0.2.10/readme) and download the archive. and make it unzip //should be the latest one !!!
+* doenload the above files and unzip it somewehere you prefer.
 
-* create a folder, "dual_ethernet".
-
-* go back to the downloaded folder, speciallay "examples > simple_switch".
-
-* copy "simple_switch" and paste it to "dual_ethernet > simple_switch".
+* the folder ".vscode" is depending on your ESP-IDF installation environment. if you don't want to have a lot of errors or warnings. please modify the files at your end first or you can just move it out from the project first. then, copy and modify them at your ESP-IDF installation enveironment.
 
 * execute VS Code.
 
-* goto "File" > "Open folder..." and select the above "dual_ethernet > simple_switch".
+* goto "File" > "Open folder..." and select the above "simple_switch".
 
-* make sure everything is ok
+* make sure everything is ok like the following image.
 
-### ESP-IDF
-
-* create a folder, "dual_ethernet".
-
-* execute VS Code goto "File" > "Open folder..." and select the above "dual_ethernet.
-
-* press "F1" and select ">ESP-IDF: Open ESP-IDF Terminal".
-
-* goto ESP-IDF Terminal prompt and type.
-
-
-```esp-idf
-idf.py create-project-from-example "espressif/ksz8863=0.2.10:simple_switch"
-```
-
-* close project and exit.
-
-* execute VS Code goto "File" > "Open folder..." and select the above "dual_ethernet > simple_switch".
-
-* make sure everything is ok.
-
+![esp32 ksz8863 simple switch build](images/esp32_ksz8863_vscode_build_setup,png)
 
 ### Next Steps
-    
-* press left bottom icons step by step.
+
+* please click from #1 step by step.
 
 * Set your project path properly.
 
@@ -149,19 +126,30 @@ idf.py create-project-from-example "espressif/ksz8863=0.2.10:simple_switch"
 
 * Set the target device "esp32" and "ESP32 chip (via ESP Prog)".
 
-* click "SDK Configuration Editor (menuconfig)" and then it takes time and you can see new folders "build" and "managed_compoennts" in the "EXPLORER" window at left side. and also please check the "OUTPUT" window in bottom side of your VS Code that will tell whether your config is correct or not. hopefully no problems at all!
+* click #6, "SDK Configuration Editor (menuconfig)" and then it takes time and you can see new folders "build" and "managed_compoennts" in the "EXPLORER" window at left side. and also please check the "OUTPUT" window in bottom side of your VS Code that will tell whether your config is correct or not. hopefully no problems at all!
+
+![esp32 ksz8863 simple switch menuconfig entry](images/esp32_ksz8863_menuconfig_entry,png)
 
 * you could see "SDK Configutation editor" window in your VS Code.
 
 * we will check four parameters only.
 
     * --> Type "cpu" in the top search box" and find "CPU Frequency" to "240MHz".
-
+    
+![esp32 ksz8863 simple switch menuconfig_01](images/esp32_ksz8863_menuconfig_01,png)
+    
     * --> Type "flash" and find "Flash size" to "4M".
 
+![esp32 ksz8863 simple switch menuconfig_02](images/esp32_ksz8863_menuconfig_02,png)
+        
     * --> Click "Example Configuration" and find "Enable external RMII clock oscillator" unselect. //it doesn't affect on project conf. but btw we are not using external osciallator.
 
+![esp32 ksz8863 simple switch menuconfig_03](images/esp32_ksz8863_menuconfig_03,png)
+
     * --> Type "eth" and find "Ethernet" and make sure "Support ESP32 internal EMAC controller" is checked and "RMII clock mode: Input RMII clockfrom external"`.
+    
+![esp32 ksz8863 simple switch menuconfig_04](images/esp32_ksz8863_menuconfig_04,png)
+    
 
 * Done !!! Click "Save".
 
@@ -169,18 +157,11 @@ idf.py create-project-from-example "espressif/ksz8863=0.2.10:simple_switch"
 
 * congrats if you can see a "Memory Type Usage Summary" in "TERMINAL" window. otherwise, you should fix the errors and misconfig...
 
-* Set the strap pins config as follows;
-
-![I2C Strap Pin Config](images/esp32_ksz8863_strap_pin_config.png)
+* neally done !
 
 * click "Flash Device" icon.
 
-* neally done !
-
 * click "Monitor Device" and see what is going on in that "Terminal".
-
-
-**or please check the video for config and build HERE**
 
 ## Console output
 
@@ -190,7 +171,7 @@ the console should be the followings if you have the following connection diagra
               port #2 <--> your PC
 * the router should have DHCP server on.
 
-```ESP-IDF MONITOR TERMINAL
+```bash
 
 ets Jul 29 2019 12:21:46
 
@@ -289,13 +270,40 @@ I (7433) simple_switch_example: port 3
 I (7443) simple_switch_example: XX XX XX XX XX XX
 
 ```
+
 ## Test
+
+* Make the network properly like this.
+
+![Test Network Diagram](images/esp32_ksz8863_test_network_diagram.png)
+
+* Set the strap pins config as follows;
+
+![esp32 ksz8863 dual Ethernet ev kit's strap pin config](images/esp32_ksz8863_strap_pin_config.png)
+
+### IP Assignment
+
+* Please check wheater your pc has a proper IP from from your router in PowerShell or CMD Terminal.
+    ```bash
+    ipconfig /all
+    ```
+* You can check all device status from your router's networking status as well
+
+### Ping test
+
+* if your laptops are Windows, please make them allow ICMP input in Windows Defender first.
+
+* Try to ping forward and backward.
+
+![esp32 ksz8863 dual Ethernet ping test 01](images/esp32ksz8863_ping_test_01.png)
+
+![esp32 ksz8863 dual Ethernet ping test 02](images/esp32ksz8863_ping_test_02.png)
 
 ### Source code "simple_switch_main.c"
 
 Line no. 321
 
-```C
+```bash
     // Sync semaphore is needed since main task local variables are used during initialization in other tasks
     init_done = xSemaphoreCreateBinary();
     assert(init_done);
@@ -308,11 +316,23 @@ Line no. 321
 
     vSemaphoreDelete(init_done);
 ```
+Line no. 72
+
+```bash
+    test_vfs_eth_tap_msg_t test_msg = {
+        .header = {
+            .src.addr = {0},
+            .dest.addr = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }, // broadcast
+            .type = ntohs(eth_type_filter),
+        },
+        .str = "This is ESP32 L2 TAP test msg"
+    };
+```
 
 ### ESP-IDF MONITOR Terminal
 
 * The following data should be out every five secs.
-```Terminal
+```bash
 I (7423) simple_switch_example: Dynamic MAC Table content:
 I (7423) simple_switch_example: valid entries 3
 I (7423) simple_switch_example: port 2
@@ -323,41 +343,27 @@ I (7433) simple_switch_example: port 3
 I (7443) simple_switch_example: XX XX XX XX XX XX
 ```
 
-### IP Assignment
-
-* Please check wheater your pc has a proper IP from from your router in PowerShell or CMD Terminal.
-    ```Terminal
-    ipconfig /all
-    ```
-* You can check all device status from your router's networking status as well
-
 ### Wire Shark
 
-#### check source code
-
-Line no. 72
-
-```C
-    test_vfs_eth_tap_msg_t test_msg = {
-        .header = {
-            .src.addr = {0},
-            .dest.addr = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }, // broadcast
-            .type = ntohs(eth_type_filter),
-        },
-        .str = "This is ESP32 L2 TAP test msg"
-    };
-```
 it braodcasts the above ethernet frame every two seconds.
 
 * please download "WireShark" and execute it.
+
 * select the "ethernet" to analyze.
+
 * type "ARP" in filter.
+
 * you can find the "ARP" ethernet frames that they are talking each others.
+
+![esp32 ksz8863 dual Ethernet ARP capture](images/esp32_ksz8863_ARP_capture.png)
+
 * type "eth.src == xx xx xx xx xx xx" (Port #3) and find a lot of messages...esp32_ksz8863rll_ev_kit is shooting it every two secs.
+
+![esp32 ksz8863 dual Ethernet l2tap msg capture](images/esp32_ksz8863_l2tap_msg_capture.png)
 
 ## Related
 
-Here is another project to check the Throughput of esp32_ksz8863rll_ev_kit by Iperf
+Here is another project to perform the Throughput of esp32_ksz8863_dual_Ethernet_ev_kit by Iperf.
 
-[Iperf_esp32_ksz8863rll_ev_kit_README](https://github.com/jnlee4838/Iperf_esp32_ksz8863rll_ev_kit_readme)
+[Iperf esp32 ksz8863 dual Ethernet ev kit README](https://github.com/jnlee4838/Iperf_esp32_ksz8863/readme)
 
