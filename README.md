@@ -87,10 +87,6 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * Prepare the esp32 ksz8863rll dual ethernet ev kit, 1 usb B to usb A cable, 2 utp cables, one router, one PC
 
-* Set the strap pins config as follows;
-
-![I2C Strap Pin Config](images/esp32_ksz8863_strap_pin_config.png)
-
 * install VS CODE
 
 * Setup ESP-IDF
@@ -174,6 +170,10 @@ idf.py create-project-from-example "espressif/ksz8863=0.2.10:simple_switch"
 * congrats if you can see a "Memory Type Usage Summary" in "TERMINAL" window. otherwise, you should fix the errors and misconfig...
 
 * click "Flash Device" icon.
+
+* Set the strap pins config as follows;
+
+![I2C Strap Pin Config](images/esp32_ksz8863_strap_pin_config.png)
 
 * neally done !
 
