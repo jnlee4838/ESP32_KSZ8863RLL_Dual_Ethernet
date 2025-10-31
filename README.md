@@ -295,7 +295,7 @@ I (7443) simple_switch_example: XX XX XX XX XX XX
 
 * Try to ping forward and backward.
 
-![esp32 ksz8863 dual Ethernet ping test 01](images/esp32_ksz8863_ping_test_01.png)
+![esp32 ksz8863 dual Ethernet ping test 01](images/esp32_ksz8863_ping_test_01.PNG)
 
 ![esp32 ksz8863 dual Ethernet ping test 02](images/esp32_ksz8863_ping_test_02.png)
 
