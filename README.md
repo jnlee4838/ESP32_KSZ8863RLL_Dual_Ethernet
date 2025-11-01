@@ -367,5 +367,5 @@ it braodcasts the above Ethernet frame every two seconds.
 
 Here is another project to perform the Throughput of esp32 ksz8863 dual Ethernet by Iperf2 as well as Iperf3.
 
-[Iperf esp32 ksz8863 dual Ethernet README](https://github.com/jnlee4838/Iperf-esp32-ksz8863/readme)
+[Iperf esp32 ksz8863 dual Ethernet README](https://github.com/jnlee4838/Iperf-esp32-ksz8863)
 
