@@ -92,21 +92,19 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * Setup ESP-IDF
 
-* go to https://github.com/espressif/vscode-esp-idf-extension?tab=readme-ov-file#how-to-use and try to follow "Hello world" project first.
-
-* everything is done !!!
+* go to [**here**](https://github.com/espressif/vscode-esp-idf-extension?tab=readme-ov-file#how-to-use) and try to follow "Hello world" project first.
 
 ## Set-up Flow
 
 * please visit [**here**](https://components.espressif.com/components/espressif/ksz8863/versions/0.2.10/readme) for more information.
 
-* doenload the above files and unzip it somewehere you prefer.
+* download and unzip it somewehere you prefer.
 
-* the folder ".vscode" is depending on your ESP-IDF installation environment. if you don't want to have a lot of errors or warnings. please modify the files at your end first or you can just move it out from the project first. then, copy and modify them at your ESP-IDF installation enveironment.
+* the folder ".vscode" is depending on your ESP-IDF installation environment. if you don't want to make a lot of errors or warnings. please modify the files at your end first or you can just move it out from the project first. then, after build, paste and modify them at your end.
 
 * execute VS Code.
 
-* goto "File" > "Open folder..." and select the above "simple_switch".
+* goto "File" > "Open folder..." and select the above folder.
 
 * make sure everything is ok like the following image.
 
@@ -126,7 +124,7 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * Set the target device "esp32" and "ESP32 chip (via ESP Prog)".
 
-* click #6, "SDK Configuration Editor (menuconfig)" and then it takes time and you can see new folders "build" and "managed_compoennts" in the "EXPLORER" window at left side. and also please check the "OUTPUT" window in bottom side of your VS Code that will tell whether your config is correct or not. hopefully no problems at all!
+* Click #6, "SDK Configuration Editor (menuconfig)" and then it takes time and you can see new folders "build" and "managed_compoennts" in the "EXPLORER" window at left side. and also please check the "OUTPUT" window in bottom side of your VS Code that will tell whether your config is correct or not. hopefully no problems at all!
 
 ![esp32 ksz8863 simple switch menuconfig entry](images/esp32_ksz8863_menuconfig_entry.png)
 
@@ -134,19 +132,19 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * we will check four parameters only.
 
-    * --> Type "cpu" in the top search box" and find "CPU Frequency" to "240MHz".
+   * --> Type "cpu" in the top search box" and find "CPU Frequency" to "240MHz".
     
 ![esp32 ksz8863 simple switch menuconfig_01](images/esp32_ksz8863_menuconfig_01.png)
     
-    * --> Type "flash" and find "Flash size" to "4M".
+   * --> Type "flash" and find "Flash size" to "4M".
 
 ![esp32 ksz8863 simple switch menuconfig_02](images/esp32_ksz8863_menuconfig_02.png)
         
-    * --> Click "Example Configuration" and find "Enable external RMII clock oscillator" unselect. //it doesn't affect on project conf. but btw we are not using external osciallator.
+   * --> Click "Example Configuration" and find "Enable external RMII clock oscillator" unchecked.
 
 ![esp32 ksz8863 simple switch menuconfig_03](images/esp32_ksz8863_menuconfig_03.png)
 
-    * --> Type "eth" and find "Ethernet" and make sure "Support ESP32 internal EMAC controller" is checked and "RMII clock mode: Input RMII clockfrom external"`.
+   * --> Type "eth" and find "Ethernet" and make sure "Support ESP32 internal EMAC controller" is checked and "RMII clock mode: Input RMII clock from external".
     
 ![esp32 ksz8863 simple switch menuconfig_04](images/esp32_ksz8863_menuconfig_04.png)
     
@@ -155,7 +153,7 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 * Click "build" and try to enjoy a cup of coffee. it takes time depending on your computer performance. anyway, you'd better take a break.
 
-* congrats if you can see a "Memory Type Usage Summary" in "TERMINAL" window. otherwise, you should fix the errors and misconfig...
+* congrats if you can see a "Memory Type Usage Summary" in "Terminal" window. otherwise, you should fix the errors and warnings...
 
 * neally done !
 
@@ -167,8 +165,8 @@ We are going to use ESP-IDF version 5.4.2 only in this project, you should insta
 
 the console should be the followings if you have the following connection diagram
 
-* a router <--> port #1 of esp32 ksz8863rll ev kit
-              port #2 <--> your PC
+* a router <--> port #1 of esp32 ksz8863rll ev kit port #2 <--> your PC
+
 * the router should have DHCP server on.
 
 ```bash
@@ -277,16 +275,20 @@ I (7443) simple_switch_example: XX XX XX XX XX XX
 
 ![Test Network Diagram](images/esp32_ksz8863_test_network_diagram.png)
 
-* Set the strap pins config as follows;
+* Set the strap pins as follows;
 
 ![esp32 ksz8863 dual Ethernet ev kit's strap pin config](images/esp32_ksz8863_strap_pin_config.png)
 
 ### IP Assignment
 
 * Please check wheater your pc has a proper IP from from your router in PowerShell or CMD Terminal.
-    ```bash
-    ipconfig /all
-    ```
+
+```bash
+
+ipconfig /all
+
+```
+
 * You can check all device status from your router's networking status as well
 
 ### Ping test
@@ -304,29 +306,29 @@ I (7443) simple_switch_example: XX XX XX XX XX XX
 Line no. 321
 
 ```bash
-    // Sync semaphore is needed since main task local variables are used during initialization in other tasks
-    init_done = xSemaphoreCreateBinary();
-    assert(init_done);
+// Sync semaphore is needed since main task local variables are used during initialization in other tasks
+init_done = xSemaphoreCreateBinary();
+assert(init_done);
 
-    // Periodically print content of Dynamic MAC table
-    xTaskCreate(print_dyn_mac, "print_dyn_mac", 4096, p1_eth_handle, 5, NULL);
-    xSemaphoreTake(init_done, portMAX_DELAY);
-    // Periodically transmit test message
-    xTaskCreate(transmit_l2test_msg, "tx_test_msg", 4096, NULL, 4, NULL);
+// Periodically print content of Dynamic MAC table
+xTaskCreate(print_dyn_mac, "print_dyn_mac", 4096, p1_eth_handle, 5, NULL);
+xSemaphoreTake(init_done, portMAX_DELAY);
+// Periodically transmit test message
+xTaskCreate(transmit_l2test_msg, "tx_test_msg", 4096, NULL, 4, NULL);
 
-    vSemaphoreDelete(init_done);
+vSemaphoreDelete(init_done);
 ```
 Line no. 72
 
 ```bash
-    test_vfs_eth_tap_msg_t test_msg = {
-        .header = {
-            .src.addr = {0},
-            .dest.addr = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }, // broadcast
-            .type = ntohs(eth_type_filter),
-        },
-        .str = "This is ESP32 L2 TAP test msg"
-    };
+test_vfs_eth_tap_msg_t test_msg = {
+    .header = {
+        .src.addr = {0},
+        .dest.addr = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }, // broadcast
+        .type = ntohs(eth_type_filter),
+    },
+    .str = "This is ESP32 L2 TAP test msg"
+};
 ```
 
 ### ESP-IDF MONITOR Terminal
@@ -345,11 +347,11 @@ I (7443) simple_switch_example: XX XX XX XX XX XX
 
 ### Wire Shark
 
-it braodcasts the above ethernet frame every two seconds.
+it braodcasts the above Ethernet frame every two seconds.
 
 * please download "WireShark" and execute it.
 
-* select the "ethernet" to analyze.
+* select the "Ethernet" to analyze.
 
 * type "ARP" in filter.
 
@@ -357,13 +359,13 @@ it braodcasts the above ethernet frame every two seconds.
 
 ![esp32 ksz8863 dual Ethernet ARP capture](images/esp32_ksz8863_ARP_capture.png)
 
-* type "eth.src == xx xx xx xx xx xx" (Port #3) and find a lot of messages...esp32_ksz8863rll_ev_kit is shooting it every two secs.
+* type "eth.src == xx xx xx xx xx xx" (Port #3) and find a lot of messages...the esp32 ksz8863 dual Ethernet ev kit is shooting it every two secs.
 
 ![esp32 ksz8863 dual Ethernet l2tap msg capture](images/esp32_ksz8863_l2tap_msg_capture.png)
 
 ## Related
 
-Here is another project to perform the Throughput of esp32_ksz8863_dual_Ethernet_ev_kit by Iperf.
+Here is another project to perform the Throughput of esp32 ksz8863 dual Ethernet by Iperf2 as well as Iperf3.
 
-[Iperf esp32 ksz8863 dual Ethernet ev kit README](https://github.com/jnlee4838/Iperf_esp32_ksz8863/readme)
+[Iperf esp32 ksz8863 dual Ethernet README](https://github.com/jnlee4838/Iperf-esp32-ksz8863/readme)
 
