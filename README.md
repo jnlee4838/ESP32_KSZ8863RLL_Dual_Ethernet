@@ -78,9 +78,8 @@ For an inquiry, email me jnlee4838@gmail.com
 
 ### International
 
-* Aliexpress: Not yet
-
-* Amazon: Not yet
+* buyKorea: Not yet
+* ebay.com: Not yet
 
 ## Preparation
 
